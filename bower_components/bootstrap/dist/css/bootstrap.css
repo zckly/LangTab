@@ -1266,6 +1266,9 @@ h6 .small,
 h1,
 .h1 {
   font-size: 36px;
+  color: white;
+  opacity: .7;
+  text-align: center;
 }
 h2,
 .h2 {
@@ -1286,6 +1289,14 @@ h5,
 h6,
 .h6 {
   font-size: 12px;
+}
+.caption {
+  font-size: 8px;
+  color: white;
+  opacity: .8;
+  position: absolute;
+  bottom: 5px;
+
 }
 p {
   margin: 0 0 10px;

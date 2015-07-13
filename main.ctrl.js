@@ -1,4 +1,6 @@
 angular.module('app').controller("MainController", function(){
     var vm = this;
-    vm.title = 'AngularJS Tutorial Example';
+    vm.title = 'Welcome to LangTab. Current Language:';
+    vm.language = 'Spanish'
+
 });

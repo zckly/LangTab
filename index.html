@@ -10,7 +10,7 @@
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script type="text/javascript" src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22feeds%22%2C%22version%22%3A%221.0%22%2C%22nocss%22%3Atrue%7D%5D%7D"></script>
 		<script src="bower_components/angular-feeds/app/angular-feeds/angular-feeds.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<script src="app.js"></script>
 		<script src="main.ctrl.js"></script>
 
@@ -19,12 +19,13 @@
 	    <script src="backgroundChanger.js"></script>
 	    <div class="container">
         <h1>{{main.title}}</h1>
+        <h1>{{main.language}}</h1>
         </div>
         <feed url="http://www.spanishdict.com/wordoftheday/feed" count="1"/>
 
         
         <div class="caption">
-            <h4></h4>
+            <h6></h6>
         </div>
 	</body>
 </html>
