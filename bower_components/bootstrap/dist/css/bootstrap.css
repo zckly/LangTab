@@ -28,7 +28,6 @@ summary {
   display: block;
 }
 audio,
-canvas,
 progress,
 video {
   display: inline-block;
@@ -1086,7 +1085,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color:rgba(0, 0, 0, 0.5);
 }
 input,
 button,
@@ -1263,24 +1262,39 @@ h6 .small,
 .h6 .small {
   font-size: 75%;
 }
+canvas {
+    border:1px dashed #999;
+    height:600px;
+    width:600px;
+}
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 30px;
   color: white;
   opacity: .7;
   text-align: center;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 70px;
+  color: white;
+  opacity: .8;
+  text-align: center;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 120px;
+  text-align: center;
+  opacity: .8;
+  color: white;
+  font-weight: bold;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 60px;
+  text-align: center;
+  opacity: .8;
+  color: white;
 }
 h5,
 .h5 {
@@ -1288,7 +1302,12 @@ h5,
 }
 h6,
 .h6 {
-  font-size: 12px;
+  font-size: 8px;
+  color: white;
+  opacity: .8;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
 }
 .caption {
   font-size: 8px;

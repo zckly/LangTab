@@ -4,15 +4,27 @@ function initialize() {
     feed.load(function(result) {
       if (!result.error) {
         var container = document.getElementById("feed");
-        for (var i = 0; i < result.feed.entries.length; i++) {
-          var entry = result.feed.entries[i];
-          var title = entry.title
-          var date = title.substr(0, title.indexOf('-'))
-          console.log(date)
-          var div = document.createElement("div");
-          div.appendChild(document.createTextNode(entry.title));
-          container.appendChild(div);
-        }
+        var day = document.getElementById("day")
+        var werd = document.getElementById("werd")
+        var def = document.getElementById('def')
+        var entry = result.feed.entries[0];
+        var title = entry.title
+        var date = title.substr(0, title.indexOf('-'))
+        var stuff = title.split(/[--]/);
+        var word = stuff[1].replace(/\s/g, '');
+        var definition = stuff[2].substr(1, stuff[2].length-1)
+
+        var div = document.createElement("div");
+        div.appendChild(document.createTextNode(date));
+        day.appendChild(div);
+        var div2 = document.createElement('div');
+        div2.appendChild(document.createTextNode(word));
+        werd.appendChild(div2);
+        var div3 = document.createElement('div')
+        div3.appendChild(document.createTextNode(definition));
+        def.appendChild(div3)
+
+
       }
     });
   }

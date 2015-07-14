@@ -23,5 +23,4 @@ function getRandomInt (min, max) {
 $(document).ready(function(){
   var bgNumber = getRandomInt(0, backgrounds.length-1);
   $('body').css('background-image', 'url('+backgrounds[bgNumber].image+')');
-  $('h4').html(backgrounds[bgNumber].subtitle);
 });
