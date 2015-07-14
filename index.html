@@ -5,22 +5,25 @@
 		<title>LangTab</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="main.css" />
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script type="text/javascript" src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22feeds%22%2C%22version%22%3A%221.0%22%2C%22nocss%22%3Atrue%7D%5D%7D"></script>
-		<!--<script src="bower_components/angular-feeds/app/angular-feeds/angular-feeds.js"></script>-->
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<script type="text/javascript" src="loadFeed.js"></script>
+		<script src="ui-bootstrap-custom-build/ui-bootstrap-custom-0.13.0.min.js"></script>
+		<script src="ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-0.13.0.min.js"></script>
 		<script src="app.js"></script>
 		<script src="main.ctrl.js"></script>
+		<script src="modal.ctrl.js"></script>
 
 	</head>
 	<body ng-app="app" ng-controller="MainController">
 	    <script src="backgroundChanger.js"></script>
 	    <div class="container">
-	        <h1>{{title}} {{language}}</h1>
+	        <h1>{{title}}</h1>
 	        <h1>Today is:</h1>
 	        <h2 id="day">
 	        </h2>
@@ -30,9 +33,32 @@
   
 
         <div> 
-        <h1>{{word}}</h1> 
-        <h3 id="werd"></h3> 
-        <h2 id="def"></h4>
+          <h1>{{word}}</h1> 
+          <h3 id="werd"></h3> 
+          <h2 id="def"></h4>
+        </div>
+
+        <div ng-controller="ModalDemoCtrl">
+            <script type="text/ng-template" id="myModalContent.html">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pick a language to learn:</h5>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li ng-repeat="item in items">
+                            <a ng-click="selected.item = item">{{ item }}</a>
+                        </li>
+                    </ul>
+                    Selected: <b>{{ selected.item }}</b>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="ok()">OK</button>
+                    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                </div>
+            </script>
+            <button class="btn btn-default" ng-click="open('sm')">Change Language</button>
+
+            <div class="currentLang" ng-show="selected">Current Language: {{ selected || items[0] }}</div>
         </div>
 
 	</body>

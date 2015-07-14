@@ -5,3 +5,12 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
+
+.currentLang {
+	color: white;
+	position: absolute;
+	bottom: 20px;
+	opacity: .85;
+	font-size: 20px
+
+}
