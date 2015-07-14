@@ -1295,7 +1295,8 @@ h6,
   color: white;
   opacity: .8;
   position: absolute;
-  bottom: 5px;
+  bottom: 100px;
+  text-align: center;
 
 }
 p {

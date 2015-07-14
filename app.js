@@ -1,1 +1,1 @@
-angular.module('app', ['feeds']);
+angular.module('app', []);
